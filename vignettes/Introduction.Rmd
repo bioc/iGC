@@ -23,8 +23,9 @@ For more information about the method iGC uses, please refer to our publication:
 iGC is on Bioconductor and can be installed following standard installation procedure.
 
 ```{r, eval=FALSE}
-source("http://www.bioconductor.org/biocLite.R")
-biocLite("iGC")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("iGC")
 ```
 
 To use,
